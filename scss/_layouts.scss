@@ -1,0 +1,104 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $main-font-color;
+}
+
+.fullscreen-header {
+    height: 100vh;
+    @include flexCenter;
+    flex-direction: column;
+    background: linear-gradient(to right bottom, rgba($main-color-dark, .3), rgba($main-color, .3)), url('../img/header.jpg');
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: center;
+}
+
+.nav {
+    background-color: $main-font-color;
+    padding: .4rem .4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+
+    @include responsive(small){
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+
+        &-item {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 3.2rem;
+
+            &:hover {
+                color: $main-color;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}
+
+.section{
+    margin: 1rem 0;
+    padding: 1rem;
+
+    &-title{
+        text-align: center;
+        margin: 1rem;
+    }
+
+    &--accent{
+        background-color: $main-color;
+    }
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: minmax(auto, 500px);
+    row-gap: 2rem;
+    padding: .5rem;
+    @include responsive(medium){
+        grid-template-columns: repeat(2, minmax(auto, 500px));
+        justify-content: center;
+    }
+
+    &__item{
+        @include flexCenter;
+    }
+    .fa{
+        color: $main-color;
+        width: 50%;
+        font-size: 3rem;
+        text-align: center;
+    }
+    &__text{
+        font-size: .9rem;
+        line-height: 1.5;
+        margin-left: 0.5rem;
+    }
+}
+
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include responsive(medium){
+        flex-direction: row;
+        max-width: 90%;
+    }
+    @include responsive(desktop){
+        flex-direction: row;
+        max-width: 70%;
+    }
+}

@@ -1,0 +1,83 @@
+.site-logo {
+    height: 3rem;
+
+    &:hover {
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+}
+
+.header-title {
+    font-size: 2rem;
+    color: #fff;
+    animation: textFromLeft 1s ease-in-out;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    animation: textFromRight 1s ease-in-out;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: $main-color;
+    border-radius: 10000px;
+    padding: .25rem 1rem;
+    border: none;
+    animation: comeOut 1s ease-in-out;
+
+    &:hover {
+        color: #fff;
+        transition: .3s ease-in-out;
+        background-color: $main-color-light;
+    }
+}
+
+.icon-down {
+    position: absolute;
+    width: 3rem;
+    bottom: 1rem;
+    animation: comeOut2 1s alternate infinite;
+}
+
+.lesson-card {
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem 1rem;
+    border: 1px solid $main-font-color;
+    border-radius: .5rem;
+    flex: 1;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 10px 10px 15px rgba(44, 41, 41, 0.7);
+        transition: .5s ease-in-out;
+    }
+
+
+    &--web {
+        background: linear-gradient(to right bottom, rgba(white, 0.6), rgba(white, 0.9)), url('../img/1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &--javascript {
+        background: linear-gradient(to right bottom, rgba(white, 0.6), rgba(white, 0.9)), url('../img/2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &--mobile {
+        background: linear-gradient(to right bottom, rgba(white, 0.6), rgba(white, 0.9)), url('../img/3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}

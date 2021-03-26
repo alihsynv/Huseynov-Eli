@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @include responsive(small) {
+        font-size: 1rem;
+    }
+
+    @include responsive(medium) {
+        font-size: 1.1rem;
+    }
+
+    @include responsive(desktop) {
+        font-size: 1.15rem;
+    }
+
+    @include responsive(large) {
+        font-size: 1.2rem;
+    }
+}

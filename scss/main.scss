@@ -1,0 +1,51 @@
+@import 'variables';
+
+@import 'mixins';
+
+@import 'reset';
+
+@import 'animations';
+
+@import 'layouts';
+
+@import 'component';
+
+
+.form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-label {
+    color: $main-font-color;
+    font-weight: bold;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    outline: none;
+    border: 1px solid $main-font-color;
+    border-radius: .3rem;
+    padding: .5rem;
+    color: inherit;
+    resize: vertical;
+    max-height: 150px;
+
+    &:hover,
+    &:focus {
+        border-color: $main-color;
+    }
+}
+
+.btn-container {
+    text-align: right;
+}
+
+.btn-square {
+    font-size: 1.1rem;
+    border-radius: .3rem;
+    padding: 0.5rem 1rem;
+}
